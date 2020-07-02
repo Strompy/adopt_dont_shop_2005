@@ -135,7 +135,7 @@ Then I see the shelter with that id including the shelter's:
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 4, Shelter Creation
 
@@ -205,7 +205,7 @@ User Story 7, Pet Index
 As a visitor
 When I visit '/pets'
 Then I see each Pet in the system including the Pet's:
-- image
+- image (url to link)
 - name
 - approximate age
 - sex
