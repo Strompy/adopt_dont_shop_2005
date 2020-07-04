@@ -15,11 +15,3 @@ RSpec.describe "pet show page" do
     expect(page).to have_content("Adoption Status: #{dog.status}")
   end
 end
-
-# Create DB migration to add description and status to pet table
-# Create route for /pets/:id
-# Create `show` method in pets_controller
-# Create show view
-# Add content to view
-# Finish `show` method so view can access content
-# Profit?
