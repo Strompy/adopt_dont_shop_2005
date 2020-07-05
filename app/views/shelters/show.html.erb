@@ -1,6 +1,5 @@
-<head>
-</head>
-<body>
+<% content_for :title, "#{@shelter.name} - Adopt Don't Shop" %>
+
   <header>
   </header>
   <nav>
@@ -21,7 +20,5 @@
 
     <%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %><br><br><br>
 
-    <h3>Remove this shelter</h3>
     <%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
   </section>
-  </body>

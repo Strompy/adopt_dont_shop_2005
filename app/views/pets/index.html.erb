@@ -1,6 +1,4 @@
-<head>
-</head>
-<body>
+<% content_for :title, "All Pets - Adopt Don't Shop" %>
   <header>
   </header>
   <nav>
@@ -22,4 +20,3 @@
         <%= button_to "Delete #{pet.name}", "/pets/#{pet.id}", method: :delete %>
     <% end %>
   </section>
-</body>

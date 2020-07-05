@@ -1,6 +1,5 @@
-<head>
-</head>
-<body>
+<% content_for :title, "#{@shelter.name} Pets - Adopt Don't Shop" %>
+
   <header>
   </header>
   <nav>
@@ -26,4 +25,3 @@
     <h3>Put a pet up for adoption</h3>
     <%= link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new" %>
     </section>
-</body>
