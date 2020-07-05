@@ -12,9 +12,9 @@
     <h1>All Shelters</h1>
 
     <% @shelters.each do |shelter| %>
-      <h2><%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2>
+      <h2><%= link_to shelter.name, "/shelters/#{shelter.id}" %></h2><br>
       <p><%= link_to "Edit #{shelter.name}", "/shelters/#{shelter.id}/edit" %></p>
-      <p><%= button_to "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %></p>
+      <p><%= button_to "Delete #{shelter.name}", "/shelters/#{shelter.id}", method: :delete %></p><br><br>
 
     <% end %>
     <br><br>
