@@ -383,7 +383,7 @@ Then I see a link at the top of the page that takes me to the Pet Index
 ```
 
 ```
-[ ] done
+[X] done
 
 User Story 20, Shelter Index Link
 
