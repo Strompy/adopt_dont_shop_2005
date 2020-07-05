@@ -7,6 +7,7 @@
     <p>Sex: <%= pet.sex %></p>
     <p>Adoption Status: <%= pet.status %></p>
     <p>Shelter: <%= pet.shelter.name %></p>
+    <p><%= link_to "Edit #{pet.name}", "/pets/#{pet.id}/edit" %></p>
 <% end %>
 
 <h3>Put a pet up for adoption</h3>
