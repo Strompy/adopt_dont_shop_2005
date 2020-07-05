@@ -15,6 +15,10 @@ RSpec.describe "pets index page" do
     expect(page).to have_content(dog.age)
     expect(page).to have_content(dog.sex)
     expect(page).to have_xpath("//img[contains(@src,'#{dog.image}')]")
+    expect(page).to have_content("Edit #{dog.name}")
+    click_on "Edit Jake"
+    expect(current_path).to eq("/pets/#{dog.id}/edit")
+    visit "/pets"
 
     expect(page).to have_content(shelter_1.name, count: 2)
     expect(page).to have_content(shelter_2.name, count: 2)
@@ -23,16 +27,26 @@ RSpec.describe "pets index page" do
     expect(page).to have_content(dog2.age)
     expect(page).to have_content(dog2.sex)
     expect(page).to have_xpath("//img[contains(@src,'#{dog2.image}')]")
+    expect(page).to have_content("Edit #{dog2.name}")
+    click_on "Edit Charley"
+    expect(current_path).to eq("/pets/#{dog2.id}/edit")
+    visit "/pets"
 
     expect(page).to have_content(cat.name)
     expect(page).to have_content(cat.age)
     expect(page).to have_content(cat.sex)
     expect(page).to have_xpath("//img[contains(@src,'#{cat.image}')]")
+    expect(page).to have_content("Edit #{cat.name}")
+    click_on "Edit Finn"
+    expect(current_path).to eq("/pets/#{cat.id}/edit")
+    visit "/pets"
 
     expect(page).to have_content(cat2.name)
     expect(page).to have_content(cat2.age)
     expect(page).to have_content(cat2.sex)
     expect(page).to have_xpath("//img[contains(@src,'#{cat2.image}')]")
-
+    expect(page).to have_content("Edit #{cat2.name}")
+    click_on "Edit Smudge"
+    expect(current_path).to eq("/pets/#{cat2.id}/edit")
   end
 end

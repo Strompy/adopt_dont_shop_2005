@@ -14,14 +14,13 @@ RSpec.describe "Shelter show page" do
     expect(page).to have_content(shelter_1.zip_code)
     expect(page).not_to have_content(shelter_2.name)
   end
+  it "has a link to the shelters pets page" do
+    shelter_1 = Shelter.create(name: "Hope", address: "123 Main Street", city: "Denver", state: "CO", zip_code: 80202)
+
+    visit "/shelters/#{shelter_1.id}"
+
+    click_on "Available Pets"
+
+    expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
+  end
 end
-
-
-# As a visitor
-# When I visit '/shelters/:id'
-# Then I see the shelter with that id including the shelter's:
-# - name
-# - address
-# - city
-# - state
-# - zip
