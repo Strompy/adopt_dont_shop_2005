@@ -9,5 +9,12 @@ RSpec.describe "shelters index page", type: :feature do
 
     expect(page).to have_content(shelter_1.name)
     expect(page).to have_content(shelter_2.name)
+
+    click_on "Edit Hope"
+    expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
+
+    visit "/shelters"
+    click_on "Edit Paw Pals"
+    expect(current_path).to eq("/shelters/#{shelter_2.id}/edit")
   end
 end
